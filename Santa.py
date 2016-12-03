@@ -8,7 +8,7 @@ what gift they want and the santa asks them for what they want
 Don't forget docstrings and comments, i'm lazy so no doc strings.
 '''
 
-Elf():
+class Elf():
     def __init__(self, filename):
         self._bad = set()
         file = open(filename, 'r')
@@ -20,7 +20,7 @@ Elf():
     def is_bad(self, name):
         return name in self._bad
 
-Santa():
+class Santa():
     def __init__(self):
         pass
 
@@ -31,7 +31,7 @@ Santa():
             else:
                 return gifts.get_gift(child.want())
 
-Child():
+class Child():
 
     def __init__(self, wanted):
         self._wanted = wanted
@@ -48,7 +48,7 @@ Child():
     def __str__(self):
         return 'I wanted ' + self._wanted + ' and got ' + self._gift
 
-Sack():
+class Sack():
     def __init__(self):
         self._gifts = []
 
